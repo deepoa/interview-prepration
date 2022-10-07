@@ -1,0 +1,75 @@
+inline and block level elements in html
+inline and inline block difference
+total size of local storage
+semantic elements in html
+box model
+css specificity
+hoisting  : Before js engine compling our code the first main thing function and varabile to the top of lexical scope
+closure : data hiding 
+call apply and bind
+async and await 
+event bubbling
+virtual dom
+functional co. reutuns js xml
+Higher order component
+redux use  share the values across the component and go with centralized storage value whereas data is shared from the single source
+connect method do in redux => higher order component it will taka co. and the property that has to  be applied action and state value from the reducer and aplly these property give a new co.
+connect() in redux   
+map state to props 
+hooks in redux
+meta tags
+
+
+es6 features
+
+
+// spread operator
+const student ={
+	
+	name :"deepesh",
+	age:20,
+	address:'near lamachor'
+}  
+
+const studentOne ={... student ,name:'deepesh'}
+
+
+console.log({studentOne})  
+
+// rest operator
+
+const student ={
+	
+	name :"deepesh",
+	age:20,
+	address:'near lamachor'
+}  
+
+const {name, ...rest} = student
+
+console.log({rest})
+
+
+// currying 
+const curry =(a)=>{
+return (b)=>{
+	return a*b
+}
+
+
+console.log(curry(3)(4))
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+

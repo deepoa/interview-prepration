@@ -1,0 +1,270 @@
+Username: deepesh.a@poolstack.in
+Password: Pool@1236
+
+
+
+developer.builder.ai/login
+
+
+Username: deepesh.a@poolstack.in
+Password: Pool@1236
+
+
+
+
+function Parent(){
+	
+var name = ' deepesh'
+function child(){
+	
+	console.log(name)
+
+}
+child()
+
+}
+
+Parent()
+
+
+for (var i = 0 ; i<=100 i++){
+	
+	setTimeout(()=>{
+	console.log(i)
+	}, 2500)
+}
+
+
+
+Authentication is the process of verifying a user’s identification through the acquisition of credentials and using those credentials to confirm the user’s identity. The authorization process begins if the credentials are legitimate. The authorization process always follows the authentication procedure.
+
+You were already aware of the authentication process because we all do it daily, whether at work (logging into your computer) or at home (logging into a website). Yet, the truth is that most “things” connected to the Internet require you to prove your identity by providing credentials.
+
+
+
+Authorization is the process of allowing authenticated users access to resources by determining whether they have system access permissions. By giving or denying specific licenses to an authenticated user, authorization enables you to control access privileges.
+
+So, authorization occurs after the system authenticates your identity, granting you complete access to resources such as information, files, databases, funds, places, and anything else. That said, authorization affects your capacity to access the system and the extent to which you can do so.
+
+
+
+// callback function
+When you nest a function inside another function as an argument, that's called a callback.
+
+// 1st Function
+
+
+
+
+
+
+let stocks = {
+    Fruits : ["strawberry", "grapes", "banana", "apple"],
+    liquid : ["water", "ice"],
+    holder : ["cone", "cup", "stick"],
+    toppings : ["chocolate", "peanuts"],
+ };
+
+
+
+
+
+let order = (fruit_name, call_production) =>{
+
+  setTimeout(function(){
+
+    console.log(`${stocks.Fruits[fruit_name]} was selected`)
+
+// Order placed. Call production to start
+   call_production();
+  },2000)
+};
+
+// 2nd Function
+
+let production = () =>{
+ setTimeout(()=>{
+    console.log("production has started")
+     
+   setTimeout(()=>{
+      console.log("The fruit has been chopped")
+      
+      
+    },2000)
+     setTimeout(()=>{
+      console.log("Add water in the ice")
+      
+      
+    },1000)
+      setTimeout(()=>{
+      console.log("start the machine ")
+      
+      
+    },1000)
+      setTimeout(()=>{
+      console.log("select the container ")
+      
+      
+    },2000)
+    
+    
+  },0000) 
+  
+};
+
+// Trigger 👇
+order(0, production)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let order = (fruit_name, call_production) =>{
+
+  setTimeout(function(){ */
+/* 
+    console.log(`${stocks.Fruits[fruit_name]} was selected`)
+
+// Order placed. Call production to start
+   call_production();
+  },2000)
+};
+
+// 2nd Function
+
+let production = () =>{
+ setTimeout(()=>{
+    console.log("production has started")
+     
+   setTimeout(()=>{
+      console.log("The fruit has been chopped")
+      
+      
+    },2000)
+     setTimeout(()=>{
+      console.log("Add water in the ice")
+      
+      
+    },1000)
+      setTimeout(()=>{
+      console.log("start the machine ")
+      
+      
+    },1000)
+      setTimeout(()=>{
+      console.log("select the container ")
+      
+      
+    },2000)
+    
+    
+  },0000) 
+  
+};
+
+// Trigger 👇
+order(0, production) */
+
+
+
+
+
+let stocks = {
+    Fruits : ["strawberry", "grapes", "banana", "apple"],
+    liquid : ["water", "ice"],
+    holder : ["cone", "cup", "stick"],
+    toppings : ["chocolate", "peanuts"],
+ };
+
+
+/* 
+let order = ( time, work ) => {
+
+  return new Promise( ( resolve, reject )=>{
+
+    if( is_shop_open ){
+
+      setTimeout(()=>{
+
+       // work is 👇 getting done here
+        resolve( work() )
+
+// Setting 👇 time here for 1 work
+       }, time)
+
+    }
+
+    else{
+      reject( console.log("Our shop is closed") )
+    }
+
+  })
+}
+// Set 👇 time here
+order( 2000, ()=>console.log(`${stocks.Fruits[0]} was selected`))
+//    pass a ☝️ function here to start working
+.then(()=>{
+  return order(0000,()=>console.log('production has started'))
+})
+
+ */
+ 
+ function toppings_choice (){
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+
+      resolve( console.log("which topping would you love?") )
+
+    },3000)
+  })
+}
+
+async function kitchen(){
+
+  console.log("A")
+  console.log("B")
+  console.log("C")
+  
+  await toppings_choice()
+  
+  console.log("D")
+  console.log("E")
+
+}
+
+// Trigger the function
+
+kitchen();
+
+
+console.log("doing the dishes")
+console.log("cleaning the tables")
+console.log("taking orders")

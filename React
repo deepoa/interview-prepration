@@ -1,0 +1,291 @@
+Learning React 
+
+
+1: Calculate the last index of an array
+ARRAR.LENGHT-1
+
+1 React is a javascript library not a framework.. for building user interfaces.
+
+* Created and Maintain by facebook..
+* Component based Architecture
+* Resuable Code .
+* React is Declatrative 
+* React will hanlde efficiency  updating and rendering  of the components
+* Declarative component focused approach
+* One Way data flow  this makes  easy to debug and find error in large projects
+* state is nothin  but obkject privately maintained in a component state infulence wht is rendered in the browser state can be changed within the component.
+* note //  calls to setState are asynchronous 
+	many time we want to execute a code only after the state is updated for handled such situations we pass a callback fucntion to a setState method  . setState method has two parameters  first parameter is state object and second is callback function.
+
+ whenever we have to update the state based on the previous state we need to  pass function as an argument to setState method instead of passing object. to the parameter we get previous state of the component we have to pass previous state  ..
+ we are not using the current state but we are using the preious 
+ state 
+
+not this 
+this.setState(
+{
+	count:this.state.count +1
+})
+
+
+ this.setState((prevState=>{
+count :prevState.count+1
+
+ }))
+
+
+
+
+
+
+
+
+
+
+ 
+
+Destructing props and state
+
+import React from 'react'
+
+
+const Greet = props =>{
+    
+const {name, heroName} = props
+
+return(
+<h1>   Hello{name} aka{herName}</h1>
+)
+
+}
+
+
+Binding event handlers
+
+4 approaches if event binding in react
+
+have to see passing method from child co, to parent as a props
+
+
+  return this.state.loggenIN && <div> welocme </div>
+
+  see methods as props  fragements and lifecycle methods 
+  redux start
+  js interview questions binary search stack quee linked list bubble sort
+  sql queries
+  oops 
+  1 project
+  node js conecppts
+  js interview questions
+    
+
+
+
+
+
+git clone -b monika_dev git_link
+
+
+
+
+
+
+
+Event handling in react
+
+
+
+
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+

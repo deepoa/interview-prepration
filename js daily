@@ -1,0 +1,277 @@
+// js todya 4 sept 
+
+ call back 
+ promises 
+ async and await
+
+ ///
+coding quesitons
+star pattern
+arrays and strings
+map filter reduce
+
+//
+security and authentication in node js
+code quality 
+code structure 
+
+
+inerview questions
+
+
+github understanding
+
+
+////
+Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
+
+
+//// callback function
+
+So callback is a function that is passed to another function. When the first function is done as an argument, it will run the second function
+
+function printString(){
+   console.log("Tom"); 
+   setTimeout(function()  { console.log("Jacob"); }, 300); 
+  console.log("Mark")
+}
+
+printString();
+
+There is a built-in method in JavaScript called “setTimeout”, which calls a function or evaluates an expression after a given period of time (in milliseconds).
+
+In other words, the message function is being called after something happened (after 3 seconds passed for this example), but not before. So the callback is the function that is passed as the argument to setTimeout.
+
+callback as an arrow function
+
+
+function printString(){
+   console.log("Tom"); 
+   setTimeout(() =>  { console.log("Jacob"); }, 300); 
+  console.log("Mark")
+}
+
+printString();
+
+The problem with callbacks is it creates something called “Callback Hell.” Basically, you start nesting functions within functions within functions, and it starts to get really hard to read the code. So in this situation Promises came to handle the nested callback in a better way.
+
+However, callback-based code can get hard to understand when the callback itself has to call functions that accept a callback. This is a common situation if you need to perform some operation that breaks down into a series of asynchronous functions. For example, consider the following:
+
+
+function doStep1(init, callback) {
+  const result = init + 1;
+  callback(result);
+}
+
+function doStep2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
+
+function doStep3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
+
+function doOperation() {
+  doStep1(0, (result1) => {
+    doStep2(result1, (result2) => {
+      doStep3(result2, (result3) => {
+        console.log(`result: ${result3}`);
+      });
+    });
+  });
+}
+
+doOperation();
+
+
+
+Because we have to call callbacks inside callbacks, we get a deeply nested doOperation() function, which is much harder to read and debug. This is sometimes called "callback hell" or the "pyramid of doom" (because the indentation looks like a pyramid on its side).
+
+
+
+
+
+
+
+
+
+
+
+// Promises 
+A promise in JavaScript is similar to a promise in real life. When we make a promise in real life, it is a guarantee that we are going to do something in the future. Because promises can only be made for the future.
+
+A promise has two possible outcomes: it will either be kept when the time comes, or it won’t.
+
+This is also the same for promises in JavaScript. When we define a promise in JavaScript, it will be resolved when the time comes, or it will get rejected. It sounds like the IF condition. But there are huge differences between them.
+
+A promise is used to handle the asynchronous result of an operation. JavaScript is designed to not wait for an asynchronous block of code to completely execute before other synchronous parts of the code can run. With Promises, we can defer the execution of a code block until an async request is completed. This way, other operations can keep running without interruption.
+
+
+States of Promises:
+
+First of all, a Promise is an object. There are 3 states of the Promise object:
+
+Pending: Initial State, before the Promise succeeds or fails.
+Resolved: Completed Promise
+Rejected: Failed Promise, throw an error
+For example, when we request data from the server by using a Promise, it will be in pending mode until we receive our data.
+
+If we achieve to get the information from the server, the Promise will be resolved successfully. But if we don’t get the information, then the Promise will be in the rejected state.
+
+// Creating a Promise
+
+const promise = new Promise(res,rej)=>{
+	//condition
+
+}
+
+
+example for promise 
+
+const myPromise = new Promise((resolve,reject)=>{
+	
+	const a = true ;
+
+	if(a)
+	{
+
+	setTimeout(()=>{
+			resolve("promise resolved")
+
+	}, 3000)
+//fullfilled
+
+	}
+
+	else{
+
+	reject("promise rejected");
+
+	}
+})
+
+myFirstPromise
+.then((successMsg) => {
+    console.log(successMsg);
+})
+.catch((errorMsg) => { 
+    console.log(errorMsg);
+});
+
+
+
+const demoPromise= function() {
+  myFirstPromise
+  .then((successMsg) => {
+      console.log("Success:" + successMsg);
+  })
+  .catch((errorMsg) => { 
+      console.log("Error:" + errorMsg);
+  })
+}
+
+demoPromise();
+
+
+promise chaning//
+
+
+
+
+
+
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+
+
+The eventual state of a pending promise can either be fulfilled with a value or rejected with a reason (error). When either of these options occur, the associated handlers queued up by a promise's then method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
+
+
+
+
+Constructor
+Promise()
+Creates a new Promise object. The constructor is primarily used to wrap functions that do not already support promises.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Async await
+Await is basically syntactic sugar for Promises. It makes your asynchronous code look more like synchronous/procedural code, which is easier for humans to understand.
+
+
+async function printMyAsync(){
+  await printString("one")
+  await printString("two")
+  await printString("three")
+}
+
+You can see that we use the “async” keyword for the wrapper function printMyAsync. This lets JavaScript know that we are using async/await syntax, and is necessary if you want to use Await. This means you can’t use Await at the global level. It always needs a wrapper function. Or we can say await is only used with an async function.
+
+The await keyword is used in an async function to ensure that all promises returned in the async function are synchronized, ie. they wait for each other. Await eliminates the use of callbacks in .then() and .catch(). In using async and await, async is prepended when returning a promise, await is prepended when calling a promise. try and catch are also used to get the rejection value of an async function.
+
+
+async function demoPromise() {
+  try {
+    let message = await myFirstPromise;
+    let message  = await helloPromise();
+    console.log(message);
+
+  }catch((error) => { 
+      console.log("Error:" + error.message);
+  })
+}
+
+// finally, call our async function
+
+(async () => { 
+  await myDate();
+})();
+
+
+
+
+
+
+
+
+
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+
+calculator callback function
+
+
+const arr =[1,2,3,4,5,6]
+
+
+function Calculator (arr, callback){
+
+const ans =[]
+
+for(i=o, i<arr.length, i++)
+{
+	ans.push(callback (arr[i]));
+
+}
+
+}
+
+calculator(arr,(a)=>arr*10)
+calculator(arr, (a)=>arr/10)
+
+	

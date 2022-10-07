@@ -1,0 +1,27 @@
+   const API ="http://139.59.14.6:8000/api/v1/banner/user/62deacfd08d895444241cd1f"
+
+// const getProductsById = async (id) => {
+//     await axios
+//       .get(`${API},${id}`)
+//       .then((res) => {
+//         setProductList(res.data.data)
+//       })
+      
+//     navigate("/productList");
+//   };
+
+cron
+
+order create
+order transaction
+dc
+demand create 
+order deliver
+
+
+ordercron algo
+
+order creation
+order transaction
+demand creation
+champion assignment

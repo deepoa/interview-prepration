@@ -1,0 +1,162 @@
+Fibonacci series using recursion, Patterns, Binary search, Armstrong.
+OOPS concept
+2. Sql queries (joins)
+3. C#
+4. Abstraction and interface
+5. Dependency injection
+6. SOLID principle
+7. REST principle
+8. Anything written in cv will be asked in detail
+9. Read technical questions from career ride
+
+
+first number missing from 1-100 if there is an array of 100 size
+fibonacci series
+prime numbers
+
+swap two number without using another variable
+He told me to do binary search,reverse a number, bubble sort, palindrome etc which I all solved except reverse a number I did it by a different method but he was adamant that I should do it my the method he probably know which I find quite strange and bizzare. After seeing me answer all these questions he jumped on to SQL and asked me to do queries.
+This is all about technical round- Oop concept , linked list ,write a code for fibonacci series , Major project.
+Interview was very good. Interviewer was very kind and asked genuine questions. Also they helped me and corrected me whenever I did wrong. Overall experience was good . They asked basic programming questions like OOPs concept, abstract class, data structures .
+3.telephonic Interview (sql,apis,dom,oops) It is somewhat HR and bit Technical.
+1.oops,encapsulation,abstraction, collection framework, apis, 2 program.
+	binary Search.
+pattern...
+about your resume.
+Print star pyramid using c++
+Write the code to check palindrome
+What is difference between O(n) and O(n2)
+What is the complexity to retrive data from dictionary using the key?
+Fibonacci series using recursion, Patterns, Binary search, Armstrong.
+What is the complexity to retrive data from dictionary using the key?
+Fibonacci series using recursion, Patterns, Binary search, Armstrong.
+
+
+
+fibonaci up to n terms
+
+
+
+// program to generate fibonacci series up to n terms
+
+// take input from the user
+const number = parseInt(prompt('Enter the number of terms: '));
+let n1 = 0, n2 = 1, nextTerm;
+
+console.log('Fibonacci Series:');
+
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+
+fibonacci up to certain no.s
+
+
+prime no,
+// program to check if a number is prime or not
+
+// take input from the user
+const number = parseInt(prompt("Enter a positive number: "));
+let isPrime = true;
+
+// check if number is equal to 1
+if (number === 1) {
+    console.log("1 is neither prime nor composite number.");
+}
+
+// check if number is greater than 1
+else if (number > 1) {
+
+    // looping through 2 to number-1
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        console.log(`${number} is a prime number`);
+    } else {
+        console.log(`${number} is a not prime number`);
+    }
+}
+
+// check if number is less than 1
+else {
+    console.log("The number is not a prime number.");
+}
+
+
+armstrong no. 
+// program to check an Armstrong number of three digits
+
+let sum = 0;
+const number = prompt('Enter a three-digit positive integer: ');
+
+// create a temporary variable
+let temp = number;
+while (temp > 0) {
+    // finding the one's digit
+    let remainder = temp % 10;
+
+    sum += remainder * remainder * remainder;
+
+    // removing last digit from the number
+    temp = parseInt(temp / 10); // convert float into integer
+}
+// check the condition
+if (sum == number) {
+    console.log(`${number} is an Armstrong number`);
+}
+else {
+    console.log(`${number} is not an Armstrong number.`);
+}
+
+
+// program to check an Armstrong number of n digits
+
+// take an input
+const number = prompt("Enter a positive integer");
+const numberOfDigits = number.length;
+let sum = 0;
+
+// create a temporary variable
+let temp = number;
+
+while (temp > 0) {
+
+    let remainder = temp % 10;
+
+    sum += remainder ** numberOfDigits;
+
+    // removing last digit from the number
+    temp = parseInt(temp / 10); // convert float into integer
+}
+
+if (sum == number) {
+    console.log(`${number} is an Armstrong number`);
+}
+else {
+    console.log(`${number} is not an Armstrong number.`);
+}
+
+
+// program to find the factors of an integer
+
+// take input
+const num = prompt('Enter a positive number: ');
+
+console.log(`The factors of ${num} is:`);
+
+// looping through 1 to num
+for(let i = 1; i <= num; i++) {
+
+    // check if number is a factor
+    if(num % i == 0) {
+        console.log(i);
+    }
+}

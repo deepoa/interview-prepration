@@ -1,0 +1,13 @@
+
+Low latency is the ability of a computing system or network to provide responses with minimal delay. Actual low latency metrics vary according to the use case.
+
+
+What is full-duplex?
+Full-duplex data transmission means that data can be transmitted in both directions on a signal carrier at the same time. For example, on a local area network with a technology that has full-duplex transmission, one workstation can be sending data on the line while another workstation is receiving data. Full-duplex transmission implies a bidirectional line that can move data in both directions simultaneously.
+
+The transmission mode of a communication channel determines the direction or directions that data can be sent. The three transmission modes are the following:
+
+Full-duplex. Simultaneous transmission of data is enabled between connected systems. The most familiar example of a full-duplex communication channel is telephony, where both participants in a call can send and receive audio simultaneously.
+Half-duplex. These channels enable bidirectional communications, but systems at either end of the connection must take turns sending over the communication medium. The most familiar example of a half-duplex communication channel is a walkie-talkie-type push-to-talk radio connection where communicating parties take turns transmitting and signal their transmissions are complete before the other can transmit.
+Simplex mode. These channels only transmit one way. Examples of simplex channels include cabled keyboards, which transmit keystrokes but do not accept input from the computer to which they are attached.
+Enabling channels to be full-duplex in networking helps avoid performance issues related to contention over bandwidth between senders and increased transmission collisions.

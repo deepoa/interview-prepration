@@ -1,0 +1,109 @@
+
+
+
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+
+
+
+node js nodesMiddleware functions can perform the following tasks:
+
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware in the stack.
+
+
+
+
+
+
+
+
+
+
+night 12
+
+
+
+
+
+
+MongoDB: A document-oriented, No-SQL database used to store the application data.
+NodeJS: It is an open-source, cross-platform, back end, JavaScript runtime environment that executes JavaScript code outside a web browser
+ExpressJS: It’s a back end web application framework for Node.js
+ReactJS: It is used to build UI components that create the user interface of the single page web application.
+
+
+
+8 node js basics , routing , streams , async ,modules
+
+
+
+
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+
+Middleware functions can perform the following tasks:
+
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware function in the stack.
+
+
+
+
+
+
+
+
+
+refresh token : allow us to create a access token without user to do login again and again ..
+
+
+
+
+
+
+JWT auth
+
+
+There are three imp parts of JWT Header, Payload,Signature . Combined header.payload.signature
+
+JWT in Browser : local storage
+       Ios : key chain
+       andriod : sharedPreference
+
+       JWT : Header {  type: JWT, alg: HS256 }
+       	     Payload { 
+  "userId": "abcd12345ghijk",
+  "username": "bezkoder",
+  "email": "contact@bezkoder.com",
+   "iss": "zKoder, author of bezkoder.com",
+  "iat": 1570238918,
+  "exp": 1570238992
+  }
+
+  We also have some Standart Fields. They are optional.
+
+iss (Issuer): who issues the JWT
+iat (Issued at): time the JWT was issued at
+exp (Expiration Time): JWT expiration time
+
+
+This part is where we use the Hash Algorithm that I told you above.
+Look at the code for getting the Signature below:
+
+const data = Base64UrlEncode(header) + '.' + Base64UrlEncode(payload);
+const hashedData = Hash(data, secret);
+const signature = Base64UrlEncode(hashedData);
+Let’s explain it.
+– First, we encode Header and Payload, join them with a dot .
+
+data = '[encodedHeader].[encodedPayload]'
+– Next, we make a hash of the data using Hash algorithm (defined at Header) with a secret string.
+– Finally, we encode the hashing result to get Signature
+
+
+
+
+Arrays and objects jwt auth and react , redux

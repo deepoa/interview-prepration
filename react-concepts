@@ -1,0 +1,34 @@
+Lifecycle methods
+
+
+
+///
+const fetchData = async () => {
+  const response = await fetch("http://139.59.14.6:8000/api/v1/order/${id}");
+  if (!response.ok) {
+    throw new Error("Data could not fetch");
+  } else {
+    return response.json();
+  }
+};
+
+useEffect(() => {
+  useEffect(() => {
+    fetchData()
+      .then((res) => {
+        res;
+      })
+      .catch((e) => {
+        console.log(e.message);
+      });
+  }, []);
+});
+http://139.59.14.6:8000/api/v1/order/${id}
+
+
+
+redux, clc, useEffect hook, use reducer,
+
+
+
+ 
